@@ -1,0 +1,48 @@
+<% layout('layouts/boilerplate')%>
+
+
+
+    <div class="col-6 offset-3">
+        <h1 class="display-4">
+            <%= player.name %>
+
+        </h1>
+        <form action="/players/<%=player._id%>?_method=PUT" method="POST" novalidate class="validated-form">
+            <div class="mb-3">
+                <label for="name" class="form-label">NAME</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Name"
+                    value="<%=player.name%>" required>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+            <div class="mb-3">
+                <label for="test" class="form-label">Test Centuries:</label>
+                <input type="number" class="form-control" name="Test" id="test" placeholder="Test"
+                    value="<%=player.Test%>" required>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+            <div class="mb-3">
+                <label for="odi" class="form-label">ODI centuries:</label>
+                <input type="number" class="form-control" name="ODI" id="odi" placeholder="ODI" value="<%=player.ODI%>"
+                    required>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+            <div class="mb-3">
+                <label for="t20" class="form-label">T20 centuries:</label>
+                <input type="number" class="form-control" name="T20" id="t20" placeholder="T20" value="<%=player.T20%>"
+                    required>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+            <div class="mb-3">
+                <label for="about" class="form-label">ABOUT:</label>
+                <textarea class="form-control" type="text" name="about" id="about" required><%=player.about%></textarea>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Image URL:</label>
+                <input type="text" class="form-control" name="image" id="image" placeholder="URL"
+                    value="<%=player.image%>" required>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+            <button class="btn btn-success">Save!</button>
+        </form>
+    </div>

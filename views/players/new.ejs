@@ -1,0 +1,41 @@
+<% layout('layouts/boilerplate')%>
+
+    <div class="row">
+        <h1 class="text-center">New Player</h1>
+        <div class="col-6 offset-3">
+
+
+
+            <form action="/players" method="POST" novalidate class="validated-form">
+                <div class="mb-3">
+                    <label for="name" class="form-label">NAME</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
+                    <div class="valid-feedback">Looks Good!</div>
+                </div>
+                <div class="mb-3">
+                    <label for="test" class="form-label">Test Centuries:</label>
+                    <input type="number" class="form-control" name="Test" id="test" placeholder="Test" required>
+                    <div class="valid-feedback">Looks Good!</div>
+                </div>
+                <div class="mb-3">
+                    <label for="odi" class="form-label">ODI centuries:</label>
+                    <input type="number" class="form-control" name="ODI" id="odi" placeholder="ODI" required>
+                    <div class="valid-feedback">Looks Good!</div>
+                </div>
+                <div class="mb-3">
+                    <label for="t20" class="form-label">T20 centuries:</label>
+                    <input type="number" class="form-control" name="T20" id="t20" placeholder="T20" required>
+                    <div class="valid-feedback">Looks Good!</div>
+                </div>
+                <div class="mb-3">
+                    <label for="about" class="form-label">ABOUT:</label>
+                    <textarea class="form-control" type="text" name="about" id="about" required></textarea>
+                    <div class="valid-feedback">Looks Good!</div>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image URL:</label>
+                    <input type="text" class="form-control" name="image" id="image" placeholder="URL" required>
+                    <div class="valid-feedback">Looks Good!</div>
+                </div>
+                <button class="btn btn-success">Save!</button>
+            </form>

@@ -1,0 +1,65 @@
+<% layout('layouts/boilerplate')%>
+    <!-- <div id="bdy">
+        <h1 class="display-4">
+            <%=player.name%>
+        </h1>
+        <p>
+            <%=player.about%>
+        </p>
+
+
+        <hr>
+        <h2>Centuries</h2>
+        <p>
+            Test: <%=player.Test%>
+                <br>
+                ODI: <%=player.ODI%>
+                    <br>
+                    T20: <%=player.T20%>
+        </p>
+        <br>
+        <hr>
+        <img src="<%=player.image%>" alt="">
+        <form action="/<%=player._id%>?_method=DELETE" method="POST">
+            <button class="btn btn-danger">Delete</button>
+        </form>
+    </div> -->
+
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card mb-3">
+                <img src="<%= player.image%>" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= player.name%>
+                    </h5>
+                    <p class="card-text">
+                        <%= player.about%>
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-muted">
+                        Centuries
+                    </li>
+                    <li class="list-group-item">
+
+                        Test: <%=player.Test%>
+                            <br>
+                            ODI: <%=player.ODI%>
+                                <br>
+                                T20: <%=player.T20%>
+
+                    </li>
+                </ul>
+                <div class="card-body">
+                    <a class="card-link btn btn-info" href="/players/<%=player._id%>/edit">Edit</a>
+                    <form class="d-inline" action="/players/<%=player._id%>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+                <div class="card-footer text-muted">
+                    2 days ago
+                </div>
+            </div>
+        </div>
+    </div>
