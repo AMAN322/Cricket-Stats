@@ -4,7 +4,6 @@
         <h1 class="display-4 mb-3"> Welcome to the stats page</h1>
     </div>
 
-    <!-- <h1>All Players</h1> -->
 
     <% for (let p of player){%>
         <div class="card" mb-3>
@@ -18,7 +17,7 @@
                             <%= p.name %>
                         </h5>
                         <p class="card-text">
-                            <%= p.about %>
+                            <%= p.role %>
                         </p>
                         <a class="btn btn-primary" href="/players/<%=p._id%>">View <%=p.name%>
                         </a>

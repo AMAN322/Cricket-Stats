@@ -7,39 +7,64 @@
             <%= player.name %>
 
         </h1>
-        <form action="/players/<%=player._id%>?_method=PUT" method="POST" novalidate class="validated-form">
+        <form action="/players/<%=player._id%>?_method=PATCH" method="POST" novalidate class="validated-form">
             <div class="mb-3">
                 <label for="name" class="form-label">NAME</label>
-                <input type="text" class="form-control" name="name" id="name" placeholder="Name"
+                <input type="text" class="form-control" name="player[name]" id="name" placeholder="Name"
                     value="<%=player.name%>" required>
                 <div class="valid-feedback">Looks Good!</div>
             </div>
             <div class="mb-3">
-                <label for="test" class="form-label">Test Centuries:</label>
-                <input type="number" class="form-control" name="Test" id="test" placeholder="Test"
+                <label for="role" class="form-label">Role</label>
+                <input type="text" class="form-control" name="player[role]" id="role" placeholder="Role"
+                    value="<%= player.role %> " required>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+            <div class="mb-3">
+                <label for="Test" class="form-label">Test Centuries:</label>
+                <input type="number" class="form-control" name="player[Test]" id="Test" placeholder="Test"
                     value="<%=player.Test%>" required>
                 <div class="valid-feedback">Looks Good!</div>
             </div>
             <div class="mb-3">
-                <label for="odi" class="form-label">ODI centuries:</label>
-                <input type="number" class="form-control" name="ODI" id="odi" placeholder="ODI" value="<%=player.ODI%>"
+                <label for="ODI" class="form-label">ODI centuries:</label>
+                <input type="number" class="form-control" name="player[ODI]" id="ODI" placeholder="ODI"
+                    value="<%=player.ODI%>" required>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+            <div class="mb-3">
+                <label for="T20" class="form-label">T20 centuries:</label>
+                <input type="number" class="form-control" name="player[T20]" id="T20" placeholder="T20"
+                    value="<%=player.T20%>" required>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+            <div class="mb-3">
+                <label for="test" class="form-label">Test wickets:</label>
+                <input type="number" class="form-control" name="player[TestW]" id="test" value="<%=player.TestW%>"
                     required>
                 <div class="valid-feedback">Looks Good!</div>
             </div>
             <div class="mb-3">
-                <label for="t20" class="form-label">T20 centuries:</label>
-                <input type="number" class="form-control" name="T20" id="t20" placeholder="T20" value="<%=player.T20%>"
-                    required>
+                <label for="odi" class="form-label">ODI wickets:</label>
+                <input type="number" class="form-control" name="player[ODIW]" id="odi" placeholder="ODI wickets"
+                    value="<%=player.ODIW%>" required>
+                <div class="valid-feedback">Looks Good!</div>
+            </div>
+            <div class="mb-3">
+                <label for="t20" class="form-label">T20 wickets:</label>
+                <input type="number" class="form-control" name="player[T20W]" id="t20" placeholder="T20 wickets"
+                    value="<%=player.T20W%>" required>
                 <div class="valid-feedback">Looks Good!</div>
             </div>
             <div class="mb-3">
                 <label for="about" class="form-label">ABOUT:</label>
-                <textarea class="form-control" type="text" name="about" id="about" required><%=player.about%></textarea>
+                <textarea class="form-control" type="text" name="player[about]" id="about"
+                    required><%=player.about%></textarea>
                 <div class="valid-feedback">Looks Good!</div>
             </div>
             <div class="mb-3">
                 <label for="image" class="form-label">Image URL:</label>
-                <input type="text" class="form-control" name="image" id="image" placeholder="URL"
+                <input type="text" class="form-control" name="player[image]" id="image" placeholder="URL"
                     value="<%=player.image%>" required>
                 <div class="valid-feedback">Looks Good!</div>
             </div>
